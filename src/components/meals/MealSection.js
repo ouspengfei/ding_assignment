@@ -9,9 +9,9 @@ export default function MealSection(props) {
         <Grid item key={section.id} xs={12} sm={6} md={4}>
           <div className="meal-section">
             <MealItems
-                  sectionName={section.sectionName}
-                  meals={section.meals}
-                  fullList={props.fullList} />           
+              sectionName={section.sectionName}
+              meals={section.meals}
+              fullList={props.fullList} />           
           </div>
         </Grid>
       ))}
