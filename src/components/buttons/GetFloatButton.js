@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     bottom: 80,
     left: '50%',
     transform: 'translateX(-50%)',
-    position: 'sticky',
+    position: 'fixed',
     zIndex: 100,
   }
 }));

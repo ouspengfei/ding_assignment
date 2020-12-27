@@ -5,6 +5,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Divider from '@material-ui/core/Divider';
+import Hidden from '@material-ui/core/Hidden';
+import Avatar from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -17,6 +19,9 @@ const useStyles = makeStyles(() => ({
     lineHeight: 2,
     fontSize: 15,
     fontWeight: 'bold',
+  },
+  avatar: {
+    marginRight: 10,
   }
 }));
 
@@ -30,11 +35,14 @@ export default function MealItems(props) {
       <ListSubheader className={classes.subheader}>{props.sectionName}</ListSubheader>
       {section.map((item) => (
         <React.Fragment key={item.id}>
-            <Divider />  
-            <ListItem className={classes.item}>
-              <ListItemText primary={`${item.title} $${item.price}`} secondary={item.description} />
-             <React.Fragment>-0+</React.Fragment>
-            </ListItem>         
+          <Divider />
+          <ListItem className={classes.item}>
+          <Hidden smDown>
+              <Avatar className={classes.avatar} alt="菜" src="images/images.jpeg" />
+          </Hidden>
+          <ListItemText primary={`${item.title} $${item.price}`} secondary={item.description} />
+          <React.Fragment>-0+</React.Fragment>
+          </ListItem>         
           </React.Fragment>
         ))}
     </List>
