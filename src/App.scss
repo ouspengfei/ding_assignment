@@ -1,0 +1,76 @@
+$base-color: white;
+$theme-color: #ffeed9;
+$secondary-theme-color: #fff8de;
+$icon-color: #fabd6e;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  background-color: $theme-color;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: $base-color;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+}
+
+.header > p {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: $theme-color;
+  position: relative;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #d1deb4;
+  border: none;
+  border-radius: 5px;
+  color: $base-color;
+}
+
+.btn:disabled {
+  border-style: none !important;
+  color: gray !important;
+  background-color: $theme-color !important;
+}
+
+#hot-btn {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-100%);
+  position: absolute;
+}
+
+#full-btn {
+  top: 20px;
+  right: 50%;
+  transform: translateX(100%);
+  position: absolute;
+}
+
+:export {
+  basecolor: $base-color;
+  themecolor: $theme-color;
+  secondarythemecolor: $secondary-theme-color;
+  iconcolor: $icon-color;
+}
