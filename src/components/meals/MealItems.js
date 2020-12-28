@@ -7,6 +7,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
 import Avatar from '@material-ui/core/Avatar';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -47,4 +48,10 @@ export default function MealItems(props) {
         ))}
     </List>
   );
+}
+
+MealItems.propTypes = {
+  sectionName: PropTypes.string.isRequired,
+  meals: PropTypes.array.isRequired,
+  fullList: PropTypes.bool.isRequired
 }

@@ -23,11 +23,13 @@ export class App extends Component {
     return (
       <div>
         <Header />
-        <Nav fullList={this.state.fullList} updatedListStatus={this.updatedListStatus}/>
-        <MealSection
-          mealSections={this.state.data}
-          fullList={this.state.fullList} />
-        <GetFloatButton />
+        <div className="content">
+          <Nav fullList={this.state.fullList} updatedListStatus={this.updatedListStatus}/>
+          <MealSection
+            mealSections={this.state.data}
+            fullList={this.state.fullList} />
+          <GetFloatButton />
+        </div>
         <Footer />
       </div>
     )

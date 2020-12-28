@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Nav(props) {
   return (
@@ -19,5 +20,10 @@ export default function Nav(props) {
       </button>
     </div>
   )
+}
+
+Nav.propTypes = {
+  updatedListStatus: PropTypes.func.isRequired,
+  fullList: PropTypes.bool.isRequired
 }
 

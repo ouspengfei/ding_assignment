@@ -1,6 +1,7 @@
 import React from 'react';
 import MealItems from './MealItems';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
 export default function MealSection(props) {
   return (
@@ -17,5 +18,10 @@ export default function MealSection(props) {
       ))}
     </Grid>
   );
+}
+
+MealSection.propTypes = {
+  mealSections: PropTypes.array.isRequired,
+  fullList: PropTypes.bool.isRequired
 }
 
