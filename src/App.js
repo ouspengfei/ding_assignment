@@ -27,6 +27,7 @@ export class App extends Component {
           <Nav fullList={this.state.fullList} updatedListStatus={this.updatedListStatus}/>
           <MealSection
             mealSections={this.state.data}
+            updatedListStatus={this.updatedListStatus}
             fullList={this.state.fullList} />
           <GetFloatButton />
         </div>
